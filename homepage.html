@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruiqi Xu | Personal Website</title>
+  <!-- Load Koh Santepheap Regular 400 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      font-family: 'Koh Santepheap', serif;
+      color: white;
+      background: url('cover.jpg') no-repeat center center/cover;
+      overflow: hidden;
+    }
+    .socials-fixed {
+      position: fixed;
+      top: 1.5rem;
+      right: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      z-index: 999;
+    }
+    .socials-fixed a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: white;
+      text-decoration: none;
+      background: rgba(0,0,0,0.5);
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .socials-fixed a:hover {
+      background: #f7c948;
+      color: black;
+    }
+    .hero {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: 'Koh Santepheap', serif;
+      font-size: 5rem;
+      font-weight: 400;
+      color: white;
+      text-shadow: 0 0 12px rgba(0,0,0,0.7);
+      margin-bottom: 1rem;
+    }
+    .hero a {
+      font-family: 'Koh Santepheap', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: white;
+      text-decoration: none;
+      border: 2px solid white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .hero a:hover {
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="socials-fixed">
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+  </div>
+
+  <div class="hero">
+    <h1>Ruiqi Xu</h1>
+    <a href="#about">More Info About Me →</a>
+  </div>
+</body>
+</html>

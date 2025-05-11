@@ -4,17 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ruiqi Xu | Personal Website</title>
-  <!-- Load Koh Santepheap Regular 400 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@400&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Koh Santepheap', serif;
       color: white;
       background: url('cover.jpg') no-repeat center center/cover;
+      height: 100vh;
       overflow: hidden;
     }
     .socials-fixed {
@@ -22,58 +25,72 @@
       top: 1.5rem;
       right: 1.5rem;
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
+      font-size: 1rem;
       z-index: 999;
     }
     .socials-fixed a {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
       color: white;
       text-decoration: none;
-      background: rgba(0,0,0,0.5);
-      padding: 0.4rem 0.8rem;
+      background: rgba(0,0,0,0.4);
+      padding: 0.3rem 0.6rem;
       border-radius: 4px;
-      transition: background 0.3s;
+      font-weight: 400;
     }
     .socials-fixed a:hover {
       background: #f7c948;
       color: black;
     }
     .hero {
-      position: absolute;
-      top: 0;
-      left: 0;
+      background-color: rgba(0, 0, 0, 0.55);
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: rgba(0, 0, 0, 0.5);
       text-align: center;
+      padding: 1rem;
     }
     .hero h1 {
       font-family: 'Koh Santepheap', serif;
-      font-size: 5rem;
+      font-size: 3.2rem;
       font-weight: 400;
       color: white;
-      text-shadow: 0 0 12px rgba(0,0,0,0.7);
       margin-bottom: 1rem;
     }
     .hero a {
       font-family: 'Koh Santepheap', serif;
       font-size: 1.1rem;
-      font-weight: 400;
       color: white;
       text-decoration: none;
       border: 2px solid white;
       padding: 0.6rem 1.2rem;
       border-radius: 4px;
+      min-width: 150px;
+      display: inline-block;
+      text-align: center;
       transition: background 0.3s;
     }
     .hero a:hover {
       background: white;
       color: black;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero a {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+      }
+      .socials-fixed {
+        font-size: 0.9rem;
+        gap: 0.6rem;
+        top: 1rem;
+        right: 1rem;
+      }
     }
   </style>
 </head>

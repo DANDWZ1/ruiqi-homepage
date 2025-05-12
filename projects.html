@@ -161,11 +161,33 @@
       50% { transform: scale(0.98); opacity: 0.7; }
       100% { transform: scale(1); opacity: 1; }
     }
-  </style>
+  .socials {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.socials a {
+  color: #333;
+}
+.socials a:hover {
+  color: #0070f3;
+}
+@media (max-width: 768px) {
+  .socials {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    gap: 1rem;
+  }
+}
+</style>
 </head>
 <body>
   <header>
     <div class="nav-container">
+  <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <div style="display: flex; align-items: center; gap: 2rem;">
       <div class="menu-toggle" id="menuToggle">☰</div>
       <nav id="mainNav">
         <a href="index.html">Home</a>
@@ -174,6 +196,23 @@
         <a href="projects.html">Projects</a>
         <a href="resume.html">Resume</a>
       </nav>
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/xu.ruiqi.287830/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/dandwz1/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/ruiqi-xu-27a6251b9/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+      
+    </div>
+    
+  </div>
+</div>
+    
+  
+</div>
+      
     </div>
   </header>
 

@@ -77,6 +77,17 @@
       color: black;
     }
 
+    /* Animation Styles */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2.2rem;
@@ -96,14 +107,28 @@
 </head>
 <body>
   <div class="socials-fixed">
-    <a href="https://facebook.com" target="_blank">Facebook</a>
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    <a href="https://www.facebook.com/xu.ruiqi.287830/" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/dandwz1/" target="_blank">Instagram</a>
+    <a href="https://www.linkedin.com/in/ruiqi-xu-27a6251b9/" target="_blank">LinkedIn</a>
   </div>
 
-  <div class="hero">
+  <div class="hero fade-in">
     <h1>Ruiqi Xu</h1>
     <a href="about.html">More Info About Me →</a>
   </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const fadeInSection = document.querySelector('.fade-in');
+    if (fadeInSection) observer.observe(fadeInSection);
+  </script>
 </body>
 </html>
+

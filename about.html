@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Ruiqi Xu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Koh+Santepheap:wght@400&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, rgba(247,250,255,0.9), rgba(255,255,255,0.9));
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: center;
+      padding: 1rem 2rem;
+      z-index: 100;
+      border-bottom: 1px solid #eaeaea;
+    }
+    nav {
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+    }
+    nav a:hover {
+      color: #0070f3;
+    }
+    .socials {
+      position: fixed;
+      top: 1rem;
+      right: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      z-index: 101;
+    }
+    .socials a {
+      color: #333;
+      font-size: 1.2rem;
+    }
+    .socials a:hover {
+      color: #0070f3;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0;
+    }
+    .section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      padding: 5rem 8vw;
+      border-bottom: 1px solid #eee;
+    }
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    .section img {
+      max-width: 640px;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      padding: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .section img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+    .text {
+      flex: 1 1 400px;
+      max-width: 600px;
+    }
+    .text h2 {
+      font-family: 'Koh Santepheap', serif;
+      font-size: 2.2rem;
+      color: #0070f3;
+      margin-bottom: 1.2rem;
+    }
+    .text p {
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 768px) {
+      .section {
+        padding: 3rem 1rem;
+        flex-direction: column !important;
+      }
+      .text h2 {
+        font-size: 1.6rem;
+      }
+    }
+      .section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="photography.html">Photography</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+    <div class="socials">
+      <a href="https://www.facebook.com/xu.ruiqi.287830/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/dandwz1/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/ruiqi-xu-27a6251b9/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  
+    
+  </header>
+  <div class="socials">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+  <main>
+    <section class="section">
+      <img src="self.jpg" alt="Life Journey">
+      <div class="text">
+        <h2>My Story</h2>
+        <p>In 2016, as part of an exchange student program, I left my home country and stepped onto American soil for the very first time, arriving alone in Arizona. This initial journey was filled with uncertainties and anxiety, despite the support of a welcoming host family. Adjusting to a completely new culture and environment was challenging, yet it marked the beginning of significant personal growth.</p>
+        <p>After that transformative half-year experience, I returned home determined and motivated. I spent the next year proactively preparing myself academically and emotionally for my future abroad. In the fall of 2017, I resumed my educational journey in Oregon at a Catholic high school. Those two years were eye-opening; not only did I broaden my perspectives and cultural understanding, but I also forged meaningful friendships and comfortably adapted to life in the United States.</p>
+        <p>In the fall of 2019, I enrolled at the University of Oregon, pursuing a Bachelor of Science in Business Administration with a Minor in Economics, graduating in 2023. My college years, though occasionally overwhelming due to rigorous academic demands and the unexpected solitude during the COVID quarantine period, were among the happiest and most fulfilling of my life. The knowledge I acquired, the cultural exchanges I experienced, and the independence I cultivated made these years truly rewarding.</p>
+        <p>Following graduation, I began working at GT Auto Group as a bookkeeper under the OPT program. This professional experience highlighted the crucial insight that academic knowledge, while foundational, must often be adapted and continually updated to effectively address real-world challenges. This period was both enlightening and humbling, emphasizing the importance of flexibility and ongoing learning.</p>
+        <p>In January 2025, another exciting chapter began as I was accepted into Columbia University's Master of Science in Enterprise Risk Management program. Moving to the East Coast represented another significant shift—despite nearly eight years in the U.S., this was my first experience living on the East Coast. Adjusting once again to new rhythms, lifestyles, and cultural nuances has been a fresh challenge, but one that I've embraced fully. Now, a semester into this new adventure, I'm increasingly at home in this vibrant and dynamic environment, eager for the continuous growth and experiences that lie ahead.</p>
+        <!-- Additional paragraphs omitted for brevity -->
+      </div>
+    </section>
+    <section class="section">
+      <img src="interest.jpg" alt="Passions & Interests">
+      <div class="text">
+        <h2>Passions & Interests</h2>
+        <p>Outside of academics and professional pursuits, I have a few passions that keep life interesting and vibrant. First and foremost, I'm an avid photographer. You'll often find me behind a camera, exploring unique angles on cars and capturing breathtaking landscapes. There's something incredibly satisfying about finding that perfect shot—it's like freezing a moment of joy or awe, making it last forever.</p>
+        <p>Cars aren't just subjects for my photography; they're also my personal playground. I'm fascinated by automotive customization, tweaking and tuning my vehicle to reflect both performance and personal style. There's a real thrill in modifying a car, seeing incremental changes come together into something entirely unique.</p>
+        <p>Winter months bring out another side of my enthusiasm—snowboarding. Riding down slopes on a snowboard is my way of embracing winter. It's challenging and exhilarating, a perfect mix of adrenaline and relaxation. It's moments like these, amidst snow-capped mountains, that I feel completely connected to nature.</p>
+        <p>Lastly, I'm passionate about technology and innovation, especially AI. Recently, I've been experimenting with deploying my own local AI language models. One of my favorite personal projects involved creating a tool that aggregates real-time stock market news. Though it's still a work-in-progress, blending tech with practical solutions gives me immense satisfaction.</p>
+        <p>These hobbies might seem unrelated at first glance, but together they shape who I am—creative, adventurous, and endlessly curious.</p>
+        <!-- Additional hobby paragraphs omitted -->
+      </div>
+    </section>
+    <section class="section">
+      <img src="vision.jpg" alt="Goals & Vision">
+      <div class="text">
+        <h2>Goals & Vision</h2>
+        <p>Looking toward the future, my vision is clear yet open-ended—I'm eager to step into roles that combine management, innovation, and thoughtful risk control. With a solid academic foundation in finance and enterprise risk management, my goal is to become a strategic thinker who effectively navigates challenges in dynamic industries.</p>
+        <p>I don't limit myself to a particular sector; instead, I envision contributing to an organization where my knack for critical thinking and my passion for exploring new technologies can make a tangible impact. I aim to bridge theoretical knowledge with real-world applications, driving strategic growth and helping teams adapt to evolving markets.</p>
+        <p>Beyond professional ambitions, I aspire to be someone who positively influences those around me. Whether it’s through sharing insights from my experiences or supporting friends and colleagues through collaboration, I want my journey to inspire others.</p>
+        <p>I'm excited by the continuous evolution of technology, particularly AI and digital transformation, and I'm committed to integrating these advancements into my future work. Ultimately, my ambition is not only to grow individually but also to contribute meaningfully to the broader community—embracing opportunities, overcoming challenges, and continuously striving to leave a lasting positive mark.</p>
+        <!-- Additional goal paragraphs omitted -->
+      </div>
+    </section>
+  </main>
+  <footer style="padding: 3rem 2rem; background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); text-align: center; border-top: 1px solid #ddd;">
+    <h2 style="font-family: 'Koh Santepheap', serif; font-size: 1.5rem; color: #0070f3; margin-bottom: 1rem;">Contact</h2>
+    <p style="margin-bottom: 1rem; font-size: 1rem;">Email: <a href="mailto:rxu87dandwz@gmail.com" style="color:#0070f3; text-decoration: none;">rxu87dandwz@gmail.com</a></p>
+    <div style="display: flex; justify-content: center; gap: 1.5rem; font-size: 1.4rem;">
+      <a href="https://www.facebook.com/xu.ruiqi.287830/" target="_blank" style="color: #333;"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/dandwz1/" target="_blank" style="color: #333;"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/ruiqi-xu-27a6251b9/" target="_blank" style="color: #333;"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+<script>
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+</body>
+</html>

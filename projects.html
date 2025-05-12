@@ -226,11 +226,16 @@
     });
 
     function openPDF(file) {
-      const modal = document.getElementById('pdfModal');
-      const viewer = document.getElementById('pdfViewer');
-      viewer.src = file + '#toolbar=0';
-      modal.classList.add('show');
-    }
+  const isMobile = window.innerWidth <= 768;
+  if (isMobile) {
+    window.open(file, '_blank');
+  } else {
+    const modal = document.getElementById('pdfModal');
+    const viewer = document.getElementById('pdfViewer');
+    viewer.src = file;
+    modal.classList.add('show');
+  }
+}
 
     function closePDF() {
       const modal = document.getElementById('pdfModal');

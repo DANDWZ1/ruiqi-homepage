@@ -196,14 +196,36 @@
     gap: 1rem;
   }
 }
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
 </head>
 <body>
   <header>
     <div class="nav-container">
   <div style="display: flex; align-items: center; gap: 2rem;">
-    
+    <div class="menu-toggle" id="menuToggle">☰</div>
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="photography.html">Photography</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+    </nav>
   </div>
+  <div class="socials">
+    <a href="https://www.facebook.com/xu.ruiqi.287830/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/dandwz1/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/ruiqi-xu-27a6251b9/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+</div>
   <div class="socials">
     <a href="https://www.facebook.com/xu.ruiqi.287830/" target="_blank"><i class="fab fa-facebook-f"></i></a>
     <a href="https://www.instagram.com/dandwz1/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -220,7 +242,7 @@
       </nav>
     </div>
   </header>
-  <div class="container">
+  <div class="container fade-in">
     <p class="intro">All images were captured using Sony Alpha 7iii with lens of Sigma 24-70mm f2.8, 70-200 f2.8, and Viltrox 135mm f1.8. My photography reflects a love for mechanical design, natural textures, and visual storytelling—especially through contrast, motion, and color temperature. Below are some curated shots divided into two categories.</p>
     <h2 class="section-title">Landscape</h2>
     <div class="gallery" id="landscape-gallery"></div>
@@ -295,6 +317,16 @@
 
     document.getElementById('prevBtn').addEventListener('click', showPrev);
     document.getElementById('nextBtn').addEventListener('click', showNext);
-  </script>
+  const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+const fadeInSection = document.querySelector('.fade-in');
+if (fadeInSection) observer.observe(fadeInSection);
+</script>
 </body>
 </html>

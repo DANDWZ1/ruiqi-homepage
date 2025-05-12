@@ -181,6 +181,15 @@
     gap: 1rem;
   }
 }
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
 </head>
 <body>
@@ -216,7 +225,7 @@
     </div>
   </header>
 
-  <div class="container">
+  <div class="container fade-in">
     <h1>Projects</h1>
     <p class="intro">Below are a few selected case studies I completed during my graduate studies—some independently, others in collaboration with peers. Each project focuses on real-world risk events faced by publicly traded companies, and reflects my understanding of enterprise risk frameworks, as well as my strategic recommendations to address those challenges.</p>
     <div class="project-grid">
@@ -290,6 +299,16 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closePDF();
     });
-  </script>
+  const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+const fadeInSection = document.querySelector('.fade-in');
+if (fadeInSection) observer.observe(fadeInSection);
+</script>
 </body>
 </html>

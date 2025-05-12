@@ -20,11 +20,22 @@
       top: 0;
       background: rgba(0, 0, 0, 0.7);
       backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: center;
       padding: 1rem 2rem;
       z-index: 100;
       border-bottom: 1px solid #333;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      color: #eee;
+      cursor: pointer;
     }
     nav {
       display: flex;
@@ -37,6 +48,25 @@
     }
     nav a:hover {
       color: #00bcd4;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #444;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
     }
     .container {
       max-width: 1200px;
@@ -142,67 +172,31 @@
       color: #00bcd4;
     }
     @media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    font-size: 0.95rem;
-  }
-
-  .container {
-    padding: 0 1rem;
-    margin: 2rem auto;
-  }
-
-  .intro {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  h2.section-title {
-    font-size: 1.3rem;
-    padding-left: 0.5rem;
-  }
-
-  .gallery {
-    column-count: 1;
-  }
-
-  .modal-content img {
-    max-width: 90vw;
-    max-height: 80vh;
-  }
-
-  .footer {
-    padding: 2rem 1rem;
-  }
-
-  .footer a {
-    margin: 0 0.5rem;
-    font-size: 1.2rem;
-  }
-}
+      .gallery {
+        column-count: 1;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="photography.html">Photography</a>
-      <a href="projects.html">Projects</a>
-      <a href="resume.html">Resume</a>
-    </nav>
+    <div class="nav-container">
+      <div class="menu-toggle" id="menuToggle">☰</div>
+      <nav id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="photography.html">Photography</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
   </header>
   <div class="container">
     <p class="intro">All images were captured using Sony Alpha 7iii with lens of Sigma 24-70mm f2.8, 70-200 f2.8, and Viltrox 135mm f1.8. My photography reflects a love for mechanical design, natural textures, and visual storytelling—especially through contrast, motion, and color temperature. Below are some curated shots divided into two categories.</p>
-
     <h2 class="section-title">Landscape</h2>
     <div class="gallery" id="landscape-gallery"></div>
-
     <h2 class="section-title">Cars</h2>
     <div class="gallery" id="car-gallery"></div>
-
     <div class="footer">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:rxu87dandwz@gmail.com">rxu87dandwz@gmail.com</a></p>
@@ -222,6 +216,12 @@
     </div>
   </div>
   <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
     const landscapeImages = Array.from({ length: 18 }, (_, i) => `${i + 1}.jpg`);
     const carImages = Array.from({ length: 30 }, (_, i) => `${i + 20}.jpg`);
     const allImages = [...landscapeImages, ...carImages];
